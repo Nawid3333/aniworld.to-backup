@@ -1,0 +1,54 @@
+# Environment & Credentials
+.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Logs
+logs/
+*.log
+
+# Data files (user-specific scraped data)
+data/series_index.json
+data/series_index.json.bak*
+data/series_report*.json
+data/.scrape_checkpoint.json
+data/.failed_series.json
+data/.series_data_partial.jsonl
+data/.worker_pids_*.json
+data/.pause_scraping
+
+# Lock files
+*.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Firefox addon (large binary, users should download their own)
+addons/ublock_origin.xpi
+
+# Temp files
+*.tmp

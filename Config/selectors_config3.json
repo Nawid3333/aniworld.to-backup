@@ -1,0 +1,128 @@
+{
+  "site_url": "https://aniworld.to",
+  "login_page": "https://aniworld.to/login",
+  "account_page": "https://aniworld.to/account",
+  "selectors": {
+    "login": {
+      "username_field": [
+        { "type": "css", "value": "input[name='email']" },
+        { "type": "css", "value": "input[type='email']" },
+        { "type": "css", "value": "input.text-field[type='email']" }
+      ],
+      "password_field": [
+        { "type": "css", "value": "input[name='password']" },
+        { "type": "css", "value": "input[type='password']" },
+        { "type": "css", "value": "input.text-field[type='password']" }
+      ],
+      "submit_button": [
+        { "type": "css", "value": "input[type='submit'].button.blue" },
+        { "type": "css", "value": "input[value='Einloggen']" },
+        { "type": "css", "value": "input[type='submit']" }
+      ],
+      "auto_login": "input[name='autoLogin']",
+      "logged_in_indicator": "div.avatar a[href^='/user/profil/']"
+    },
+    "series_index": {
+      "path": "/animes",
+      "container": "#seriesContainer",
+      "all_links": "#seriesContainer ul li a",
+      "alt_title_attr": "data-alternative-title"
+    },
+    "series_detail": {
+      "series_title": "h1[itemprop='name'] > span",
+      "alt_titles_attr": "data-alternativetitles",
+      "alt_titles_element": "h1[itemprop='name']",
+      "description": "p.seri_des",
+      "description_attr": "data-full-description",
+      "start_year": "span[itemprop='startDate'] a",
+      "end_year": "span[itemprop='endDate'] a",
+      "age_rating": "div[data-fsk]",
+      "age_rating_attr": "data-fsk",
+      "imdb_link": "a.imdb-link",
+      "imdb_attr": "data-imdb",
+      "genres": "div.genres ul li a.genreButton",
+      "season_links": "#stream ul:first-of-type li a[href*='/staffel-']",
+      "season_links_movies": "#stream ul:first-of-type li a[href*='/filme']",
+      "active_season": "#stream ul:first-of-type li a.active",
+      "total_seasons_meta": "meta[itemprop='numberOfSeasons']",
+      "episode_rows": "table.seasonEpisodesList tbody tr[data-episode-id]",
+      "episode_number": "meta[itemprop='episodeNumber']",
+      "episode_number_attr": "content",
+      "title_ger": "td.seasonEpisodeTitle a strong",
+      "title_eng": "td.seasonEpisodeTitle a span",
+      "episode_url": "td a[itemprop='url']",
+      "watched_class": "seen",
+      "language_flags": "td.editFunctions img.flag",
+      "episode_nav_links": "#stream ul:nth-of-type(2) li a[data-episode-id]",
+      "episode_nav_watched": "#stream ul:nth-of-type(2) li a.seen",
+      "season_watched": "#stream ul:first-of-type li a.seen",
+      "rating_value": "span[itemprop='ratingValue']",
+      "rating_count": "span[itemprop='ratingCount']"
+    },
+    "subscription": {
+      "container": "div.add-series",
+      "series_id_attr": "data-series-id",
+      "favourite_attr": "data-series-favourite",
+      "watchlist_attr": "data-series-watchlist",
+      "favourite_button": "li.setFavourite",
+      "favourite_active": "li.setFavourite.true",
+      "watchlist_button": "li.setWatchlist",
+      "watchlist_active": "li.setWatchlist.true"
+    },
+    "season_nav": {
+      "pills": "#stream ul:first-of-type li a[href*='/staffel-']",
+      "movies_pill": "#stream ul:first-of-type li a[href*='/filme']",
+      "pill_attribute": "href"
+    },
+    "account_pages": {
+      "subscribed": "/account/subscribed",
+      "watchlist": "/account/watchlist"
+    },
+    "account_series": {
+      "container": "div.seriesListContainer",
+      "entries": "div.seriesListContainer > div a",
+      "title": "h3",
+      "genre": "small"
+    }
+  },
+  "timing": {
+    "initial_delay": 0.5,
+    "element_timeout": 15,
+    "season_nav_wait": 10.0,
+    "element_find_timeout": 2,
+    "page_ready_timeout": 10,
+    "page_ready_body_timeout": 10,
+    "login_response_timeout": 10,
+    "process_lookup_timeout": 2,
+    "addon_init_delay": 0.5,
+    "worker_addon_init_delay": 0.3,
+    "worker_service_init_delay": 0.1,
+    "cookie_apply_page_ready_timeout": 5,
+    "discovery_worker_stagger_delay": 1.0,
+    "parallel_worker_stagger_delay": 2.0,
+    "worker_auth_retry_delay": 1.0,
+    "season_detection_browser_error_delay": 2.0,
+    "season_detection_retry_delay": 1.0,
+    "season_detection_retry_jitter": 0.5,
+    "season_failure_backoff_step": 0.5,
+    "season_failure_backoff_max": 2.0,
+    "season_failure_backoff_jitter": 0.1,
+    "missing_season_retry_delay": 0.2,
+    "missing_season_retry_jitter": 0.1,
+    "success_delay": 0.8,
+    "error_backoff_base": 2.0,
+    "error_backoff_max": 15.0,
+    "error_backoff_502_base": 2.0,
+    "error_backoff_502_max": 10.0,
+    "min_request_interval": 0.25,
+    "health_check_every": 15,
+    "error_restart_threshold": 8,
+    "max_retries_season": 3,
+    "max_retries_retry": 5
+  },
+  "language_map": {
+    "german.svg": "german_dub",
+    "japanese-german.svg": "german_sub",
+    "japanese-english.svg": "english_sub"
+  }
+}
